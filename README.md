@@ -1,11 +1,11 @@
 # Autoscript VPS v.2
-## _Fighter Tunnel, This autoscript can be used by Debian 10/Ubuntu 20.04 (LTS)_
+## _Fighter Tunnel, Autoscript ini dapat digunakan oleh Debian 10/Ubuntu 20.04 (LTS)_
 
 ### Contact admin [bhoikfostyahya](https://t.me/bhoikfost_yahya)
 
 ### Installer Script
 ```
-source <(curl -sL https://yha.my.id/ub20.sh)
+wget --no-check-certificate https://raw.githubusercontent.com/Kulanbagong1/Autoscript-vps/main/ub20.sh && chmod +x ub20.sh && ./ub20.sh
 ```
 
 |        SERVICE          |      PORT      |
