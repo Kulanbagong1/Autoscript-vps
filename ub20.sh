@@ -301,7 +301,7 @@ function configure_nginx() {
 }
 ftTunneling() {
     MYIP=$(curl -sS ipv4.icanhazip.com)
-    IZIN=$(curl -sS https://sc-xray.yha.my.id/ip | awk '{print $4}' | grep $MYIP)
+    IZIN=$(curl -sS https://raw.githubusercontent.com/Kulanbagong1/Zuack/main/input/ip | awk '{print $4}' | grep $MYIP)
     if [ "$MYIP" = "$IZIN" ]; then
         TIMEDATE
     else
