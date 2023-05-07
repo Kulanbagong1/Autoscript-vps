@@ -487,23 +487,23 @@ apete_apdet() {
 }
 apete_apdet
 clear
-apete_eee() {
-    ftTunneling
-    if [ -f /home/needupdate ]; then
-        red "Your script need to update first !"
-        exit 0
-    elif [ "$res" = "Permission Accepted..." ]; then
-        echo -ne
-    else
-        clear
-        echo ""
-        red "Permission Denied! Please Buy Licence"
-        green "Contact telegram https://t.me/bhoikfost_yahya"
-        sleep 8
-        exit 0
-    fi
-}
-apete_eee
+#apete_eee() {
+#   ftTunneling
+#   if [ -f /home/needupdate ]; then
+#       red "Your script need to update first !"
+#        exit 0
+#    elif [ "$res" = "Permission Accepted..." ]; then
+#       echo -ne
+#    else
+#       clear
+#       echo ""
+#       red "Permission Denied! Please Buy Licence"
+#        green "Contact telegram https://t.me/bhoikfost_yahya"
+#        sleep 8
+#        exit 0
+#   fi
+#}
+#apete_eee
 clear
 LOGO
 echo -e "${RED}JANGAN INSTALL SCRIPT INI MENGGUNAKAN KONEKSI VPN!!!${FONT}"
