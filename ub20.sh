@@ -26,64 +26,64 @@ green() { echo -e "\\033[32;1m${*}\\033[0m"; }
 red() { echo -e "\\033[31;1m${*}\\033[0m"; }
 
 # // configuration GET | BHOIKFOST YAHYA AUTOSCRIPT
-TIMES="10"
-NAMES=$(whoami)
-IMP="wget -q -O"
-CHATID="1118232400"
-LOCAL_DATE="/usr/bin/"
-MYIP=$(wget -qO- ipinfo.io/ip)
-CITY=$(curl -s ipinfo.io/city)
-TIME=$(date +'%Y-%m-%d %H:%M:%S')
-RAMMS=$(free -m | awk 'NR==2 {print $2}')
-KUNCI = "5969239931:AAF4XsB0qdDfB2tGkbzggpetgR3vOpQFka4"
-URL = "https://api.telegram.org/bot $KEY /sendMessage"
-GITHUB_CMD="https://github.com/Kulanbagong1/Autoscript-vps/raw/"
-NAMECOM=$(curl -sS https://raw.githubusercontent.com/Kulanbagong1/Zuack/main/input/ip | grep $MYIP | awk '{print $2}')
-OS=$(cat /etc/os-release | grep -w PRETTY_NAME | head -n1 | sed 's/=//g' | sed 's/"//g' | sed 's/PRETTY_NAME//g')
-dateFromServer=$(curl -v --insecure --silent https://google.com/ 2>&1 | grep Date | sed -e 's/< Date: //')
-Date_list=$(date +"%Y-%m-%d" -d "$dateFromServer")
-echo $NAMECOM >/usr/local/etc/.$NAMECOM.ini
-CekOne=$(cat /usr/local/etc/.$NAMECOM.ini)
+#TIMES="10"
+#NAMES=$(whoami)
+#IMP="wget -q -O"
+#CHATID="1118232400"
+#LOCAL_DATE="/usr/bin/"
+#MYIP=$(wget -qO- ipinfo.io/ip)
+#CITY=$(curl -s ipinfo.io/city)
+#TIME=$(date +'%Y-%m-%d %H:%M:%S')
+#RAMMS=$(free -m | awk 'NR==2 {print $2}')
+#KUNCI = "5969239931:AAF4XsB0qdDfB2tGkbzggpetgR3vOpQFka4"
+#URL = "https://api.telegram.org/bot $KEY /sendMessage"
+#GITHUB_CMD="https://github.com/Kulanbagong1/Autoscript-vps/raw/"
+#NAMECOM=$(curl -sS https://raw.githubusercontent.com/Kulanbagong1/Zuack/main/input/ip | grep $MYIP | awk '{print $2}')
+#OS=$(cat /etc/os-release | grep -w PRETTY_NAME | head -n1 | sed 's/=//g' | sed 's/"//g' | sed 's/PRETTY_NAME//g')
+#dateFromServer=$(curl -v --insecure --silent https://google.com/ 2>&1 | grep Date | sed -e 's/< Date: //')
+#Date_list=$(date +"%Y-%m-%d" -d "$dateFromServer")
+#echo $NAMECOM >/usr/local/etc/.$NAMECOM.ini
+#CekOne=$(cat /usr/local/etc/.$NAMECOM.ini)
 
-secs_to_human() {
-    echo "Installation time : $((${1} / 3600)) hours $(((${1} / 60) % 60)) minute's $((${1} % 60)) seconds"
-}
+#secs_to_human() {
+#    echo "Installation time : $((${1} / 3600)) hours $(((${1} / 60) % 60)) minute's $((${1} % 60)) seconds"
+#}
 
-INS="apt-get install -y"
-start=$(date +%s)
-ln -fs /usr/share/zoneinfo/Asia/Jakarta /etc/localtime
-function print_ok() {
-    echo -e "${OK} ${BLUE} $1 ${FONT}"
-}
+#INS="apt-get install -y"
+#start=$(date +%s)
+#ln -fs /usr/share/zoneinfo/Asia/Jakarta /etc/localtime
+#function print_ok() {
+#    echo -e "${OK} ${BLUE} $1 ${FONT}"
+#}
 
-function print_error() {
-    echo -e "${ERROR} ${REDBG} $1 ${FONT}"
-}
+#function print_error() {
+#    echo -e "${ERROR} ${REDBG} $1 ${FONT}"
+#}
 
-function is_root() {
-    if [[ 0 == "$UID" ]]; then
-        print_ok "Root user Start installation process"
-    else
-        print_error "The current user is not the root user, please switch to the root user and run the script again"
-    fi
+#function is_root() {
+#   if [[ 0 == "$UID" ]]; then
+#        print_ok "Root user Start installation process"
+#    else
+#        print_error "The current user is not the root user, please switch to the root user and run the script again"
+#    fi
 
-}
-judge() {
-    if [[ 0 -eq $? ]]; then
-        print_ok "$1 Complete... | thx to ${YELLOW}bhoikfostyahya${FONT}"
-        sleep 1
-    fi
-}
-TIMEDATE() {
-    if [ -f "/etc/.$NAMECOM.ini" ]; then
-        CekTwo=$(cat /etc/.$NAMECOM.ini)
-        if [ "$CekOne" = "$CekTwo" ]; then
-            res="Expired"
-        fi
-    else
-        res="Permission Accepted..."
-    fi
-}
+#}
+#judge() {
+#    if [[ 0 -eq $? ]]; then
+#        print_ok "$1 Complete... | thx to ${YELLOW}bhoikfostyahya${FONT}"
+#        sleep 1
+#    fi
+#}
+#TIMEDATE() {
+#    if [ -f "/etc/.$NAMECOM.ini" ]; then
+#        CekTwo=$(cat /etc/.$NAMECOM.ini)
+#        if [ "$CekOne" = "$CekTwo" ]; then
+#            res="Expired"
+#        fi
+#    else
+#        res="Permission Accepted..."
+#    fi
+#}
 function nginx_install() {
     # // Checking System
     if [[ $(cat /etc/os-release | grep -w ID | head -n1 | sed 's/=//g' | sed 's/"//g' | sed 's/ID//g') == "ubuntu" ]]; then
