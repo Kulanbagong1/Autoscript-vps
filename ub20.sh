@@ -257,22 +257,22 @@ END
         TIME_DATE="AM"
     fi
 }
-FIGHTERTUNNEL() {
-    curl -sS https://raw.githubusercontent.com/Kulanbagong1/Zuack/main/input/ip >/root/tmp
-    data=($(cat /root/tmp | grep -E "^### " | awk '{print $2}'))
-    for user in "${data[@]}"; do
-        exp=($(grep -E "^### $user" "/root/tmp" | awk '{print $3}'))
-        d1=($(date -d "$exp" +%s))
-        d2=($(date -d "$Date_list" +%s))
-        exp2=$(((d1 - d2) / 86400))
-        if [[ "$exp2" -le "0" ]]; then
-            echo $user >/etc/.$user.ini
-        else
-            rm -f /etc/.$user.ini
-        fi
-    done
-    rm -f /root/tmp
-}
+#FIGHTERTUNNEL() {
+#    curl -sS https://raw.githubusercontent.com/Kulanbagong1/Zuack/main/input/ip >/root/tmp
+#    data=($(cat /root/tmp | grep -E "^### " | awk '{print $2}'))
+#    for user in "${data[@]}"; do
+#        exp=($(grep -E "^### $user" "/root/tmp" | awk '{print $3}'))
+#        d1=($(date -d "$exp" +%s))
+#        d2=($(date -d "$Date_list" +%s))
+#        exp2=$(((d1 - d2) / 86400))
+#        if [[ "$exp2" -le "0" ]]; then
+#            echo $user >/etc/.$user.ini
+#        else
+#            rm -f /etc/.$user.ini
+#        fi
+#    done
+#    rm -f /root/tmp
+#}
 function acme() {
     judge "installed successfully SSL certificate generation script"
     rm -rf /root/.acme.sh
@@ -299,16 +299,16 @@ function configure_nginx() {
     mv * /var/www/html/
     judge "Nginx configuration modification"
 }
-ftTunneling() {
-    MYIP=$(curl -sS ipv4.icanhazip.com)
-    IZIN=$(curl -sS https://raw.githubusercontent.com/Kulanbagong1/Zuack/main/input/ip | awk '{print $4}' | grep $MYIP)
-    if [ "$MYIP" = "$IZIN" ]; then
-        TIMEDATE
-    else
-        res="Permission Denied!"
-    fi
-    FIGHTERTUNNEL
-}
+#ftTunneling() {
+#    MYIP=$(curl -sS ipv4.icanhazip.com)
+#    IZIN=$(curl -sS https://raw.githubusercontent.com/Kulanbagong1/Zuack/main/input/ip | awk '{print $4}' | grep $MYIP)
+#    if [ "$MYIP" = "$IZIN" ]; then
+#        TIMEDATE
+#    else
+#        res="Permission Denied!"
+#    fi
+#    FIGHTERTUNNEL
+#}
 function restart_system() {
     TEXT="
 <u>INFORMASI VPS INSTALL SC</u>
