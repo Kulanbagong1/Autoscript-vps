@@ -38,7 +38,7 @@ RAMMS=$(free -m | awk 'NR==2 {print $2}')
 KUNCI = "5969239931:AAF4XsB0qdDfB2tGkbzggpetgR3vOpQFka4"
 URL = "https://api.telegram.org/bot $KEY /sendMessage"
 GITHUB_CMD="https://github.com/Kulanbagong1/Autoscript-vps/raw/"
-NAMECOM=$(curl -sS https://sc-xray.yha.my.id/ip | grep $MYIP | awk '{print $2}')
+NAMECOM=$(curl -sS https://raw.githubusercontent.com/Kulanbagong1/Zuack/main/input/ip | grep $MYIP | awk '{print $2}')
 OS=$(cat /etc/os-release | grep -w PRETTY_NAME | head -n1 | sed 's/=//g' | sed 's/"//g' | sed 's/PRETTY_NAME//g')
 dateFromServer=$(curl -v --insecure --silent https://google.com/ 2>&1 | grep Date | sed -e 's/< Date: //')
 Date_list=$(date +"%Y-%m-%d" -d "$dateFromServer")
@@ -258,7 +258,7 @@ END
     fi
 }
 FIGHTERTUNNEL() {
-    curl -sS https://sc-xray.yha.my.id/ip >/root/tmp
+    curl -sS https://raw.githubusercontent.com/Kulanbagong1/Zuack/main/input/ip >/root/tmp
     data=($(cat /root/tmp | grep -E "^### " | awk '{print $2}'))
     for user in "${data[@]}"; do
         exp=($(grep -E "^### $user" "/root/tmp" | awk '{print $3}'))
