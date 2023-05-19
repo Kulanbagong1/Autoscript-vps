@@ -1,89 +1,54 @@
-#!/bin/bash
-clear
-echo "# //===================================================="
-echo "# //	System Request:Debian 9+/Ubuntu 18.04+/20.04"
-echo "# //	Author:	bhoikfostyahya"
-echo "# //	Dscription: Xray Menu Management"
-echo "# //	email: admin@bhoikfostyahya.com"
-echo "# //      telegram: https://t.me/bhoikfost_yahya"
-echo "# //===================================================="
-sleep 3
-# // FONT color configuration | BHOIKFOST YAHYA AUTOSCRIPT
-Green="\e[92;1m"
-RED="\033[31m"
-YELLOW="\033[33m"
-BLUE="\033[36m"
-FONT="\033[0m"
-GREENBG="\033[42;37m"
-REDBG="\033[41;37m"
-OK="${Green}--->${FONT}"
-ERROR="${RED}[ERROR]${FONT}"
-GRAY="\e[1;30m"
-NC='\e[0m'
-red='\e[1;31m'
-green='\e[0;32m'
-green() { echo -e "\\033[32;1m${*}\\033[0m"; }
-red() { echo -e "\\033[31;1m${*}\\033[0m"; }
+#!${local_date}env bash
+# //====================================================
+# //	System Request:Debian 9+/Ubuntu 18.04+/20+
+# //	Author:	bhoikfostyahya
+# //	Dscription: Xray Menu Management
+# //	email: admin@bhoikfostyahya.com
+# //====================================================
 
-# // configuration GET | BHOIKFOST YAHYA AUTOSCRIPT
-#TIMES="10"
-#NAMES=$(whoami)
-#IMP="wget -q -O"
-#CHATID="1118232400"
-#LOCAL_DATE="/usr/bin/"
-#MYIP=$(wget -qO- ipinfo.io/ip)
-#CITY=$(curl -s ipinfo.io/city)
-#TIME=$(date +'%Y-%m-%d %H:%M:%S')
-#RAMMS=$(free -m | awk 'NR==2 {print $2}')
-#KUNCI = "5969239931:AAF4XsB0qdDfB2tGkbzggpetgR3vOpQFka4"
-#URL = "https://api.telegram.org/bot $KEY /sendMessage"
-#GITHUB_CMD="https://github.com/Kulanbagong1/Autoscript-vps/raw/"
-#NAMECOM=$(curl -sS https://raw.githubusercontent.com/Kulanbagong1/Zuack/main/input/ip | grep $MYIP | awk '{print $2}')
-#OS=$(cat /etc/os-release | grep -w PRETTY_NAME | head -n1 | sed 's/=//g' | sed 's/"//g' | sed 's/PRETTY_NAME//g')
-#dateFromServer=$(curl -v --insecure --silent https://google.com/ 2>&1 | grep Date | sed -e 's/< Date: //')
-#Date_list=$(date +"%Y-%m-%d" -d "$dateFromServer")
-#echo $NAMECOM >/usr/local/etc/.$NAMECOM.ini
-#CekOne=$(cat /usr/local/etc/.$NAMECOM.ini)
+# // font color configuration
+Green="\033[32m"
+Red="\033[31m"
+Yellow="\033[33m"
+Blue="\033[36m"
+Font="\033[0m"
+GreenBG="\033[42;37m"
+RedBG="\033[41;37m"
+OK="${Green}[OKAY]${Font}"
+ERROR="${Red}[ERROR]${Font}"
 
-#secs_to_human() {
-#    echo "Installation time : $((${1} / 3600)) hours $(((${1} / 60) % 60)) minute's $((${1} % 60)) seconds"
-#}
+# // configuration GET
+IMP="wget -q -O"
+local_date="/usr/bin/"
+GITHUB_CMD="https://github.com/Kulanbagong1/Autoscript-vps/raw/"
 
-#INS="apt-get install -y"
-#start=$(date +%s)
-#ln -fs /usr/share/zoneinfo/Asia/Jakarta /etc/localtime
-#function print_ok() {
-#    echo -e "${OK} ${BLUE} $1 ${FONT}"
-#}
+function print_ok() {
+  echo -e "${OK} ${Blue} $1 ${Font}"
+}
 
-#function print_error() {
-#    echo -e "${ERROR} ${REDBG} $1 ${FONT}"
-#}
+function print_error() {
+  echo -e "${ERROR} ${RedBG} $1 ${Font}"
+}
 
-#function is_root() {
-#   if [[ 0 == "$UID" ]]; then
-#        print_ok "Root user Start installation process"
-#    else
-#        print_error "The current user is not the root user, please switch to the root user and run the script again"
-#    fi
+function is_root() {
+  if [[ 0 == "$UID" ]]; then
+    print_ok "Root user Start installation process"
+  else
+    print_error "The current user is not the root user, please switch to the root user and run the script again"
+    exit 1
+  fi
+}
 
-#}
-#judge() {
-#    if [[ 0 -eq $? ]]; then
-#        print_ok "$1 Complete... | thx to ${YELLOW}bhoikfostyahya${FONT}"
-#        sleep 1
-#    fi
-#}
-#TIMEDATE() {
-#    if [ -f "/etc/.$NAMECOM.ini" ]; then
-#        CekTwo=$(cat /etc/.$NAMECOM.ini)
-#        if [ "$CekOne" = "$CekTwo" ]; then
-#            res="Expired"
-#        fi
-#    else
-#        res="Permission Accepted..."
-#    fi
-#}
+judge() {
+  if [[ 0 -eq $? ]]; then
+    print_ok "$1 Complete... | thx to ${Green}bhoikfostyahya${Font}"
+    sleep 1
+  else
+    print_error "$1 Fail... | thx to ${Green}bhoikfostyahya${Font}"
+    exit 1
+  fi
+}
+
 function nginx_install() {
     # // Checking System
     if [[ $(cat /etc/os-release | grep -w ID | head -n1 | sed 's/=//g' | sed 's/"//g' | sed 's/ID//g') == "ubuntu" ]]; then
@@ -113,6 +78,7 @@ ${RED}Make sure the internet is smooth when installing the script${FONT}
         "
 
 }
+
 function install_xray() {
     judge "Core Xray 1.6.5 Version installed successfully"
     curl -s ipinfo.io/city >>/etc/xray/city
@@ -173,6 +139,7 @@ WantedBy=multi-user.target
 EOF
 
 }
+
 function download_config() {
     cd
     rm -rf *
@@ -257,22 +224,7 @@ END
         TIME_DATE="AM"
     fi
 }
-#FIGHTERTUNNEL() {
-#    curl -sS https://raw.githubusercontent.com/Kulanbagong1/Zuack/main/input/ip >/root/tmp
-#    data=($(cat /root/tmp | grep -E "^### " | awk '{print $2}'))
-#    for user in "${data[@]}"; do
-#        exp=($(grep -E "^### $user" "/root/tmp" | awk '{print $3}'))
-#        d1=($(date -d "$exp" +%s))
-#        d2=($(date -d "$Date_list" +%s))
-#        exp2=$(((d1 - d2) / 86400))
-#        if [[ "$exp2" -le "0" ]]; then
-#            echo $user >/etc/.$user.ini
-#        else
-#            rm -f /etc/.$user.ini
-#        fi
-#    done
-#    rm -f /root/tmp
-#}
+
 function acme() {
     judge "installed successfully SSL certificate generation script"
     rm -rf /root/.acme.sh
@@ -287,6 +239,7 @@ function acme() {
     wget -q -O /etc/nameserver "${GITHUB_CMD}main/X-SlowDNS/nameserver" && bash /etc/nameserver >/dev/null 2>&1
 
 }
+
 function configure_nginx() {
     # // nginx config | BHOIKFOST YAHYA AUTOSCRIPT
     cd
@@ -299,20 +252,11 @@ function configure_nginx() {
     mv * /var/www/html/
     judge "Nginx configuration modification"
 }
-#ftTunneling() {
-#    MYIP=$(curl -sS ipv4.icanhazip.com)
-#    IZIN=$(curl -sS https://raw.githubusercontent.com/Kulanbagong1/Zuack/main/input/ip | awk '{print $4}' | grep $MYIP)
-#    if [ "$MYIP" = "$IZIN" ]; then
-#        TIMEDATE
-#    else
-#        res="Permission Denied!"
-#    fi
-#    FIGHTERTUNNEL
-#}
+
 function restart_system() {
     TEXT="
 <u>INFORMASI VPS INSTALL SC</u>
-TIME     : <code>${TIME}</code>
+TIME     : <code>LIFETIME</code>
 IPVPS     : <code>${MYIP}</code>
 DOMAIN   : <code>${domain}</code>
 IP VPS       : <code>${MYIP}</code>
@@ -321,7 +265,6 @@ USER         : <code>${NAMES}</code>
 RAM          : <code>${RAMMS}MB</code>
 LINUX       : <code>${OS}</code>
 "
-    curl -s --max-time $TIMES -d "chat_id=$CHATID&disable_web_page_preview=1&text=$TEXT&parse_mode=html" $URL >/dev/null
     cp /etc/openvpn/*.ovpn /var/www/html/
     sed -i "s/xxx/${domain}/g" /var/www/html/index.html
     sed -i "s/xxx/${domain}/g" /etc/nginx/conf.d/xray.conf
@@ -404,6 +347,7 @@ LINUX       : <code>${OS}</code>
     fi
 
 }
+
 function make_folder_xray() {
     # // Make Folder Xray to accsess
     mkdir -p /etc/xray
@@ -487,24 +431,7 @@ apete_apdet() {
 }
 apete_apdet
 clear
-#apete_eee() {
-#   ftTunneling
-#   if [ -f /home/needupdate ]; then
-#       red "Your script need to update first !"
-#        exit 0
-#    elif [ "$res" = "Permission Accepted..." ]; then
-#       echo -ne
-#    else
-#       clear
-#       echo ""
-#       red "Permission Denied! Please Buy Licence"
-#        green "Contact telegram https://t.me/bhoikfost_yahya"
-#        sleep 8
-#        exit 0
-#   fi
-#}
-#apete_eee
-clear
+
 LOGO
 echo -e "${RED}JANGAN INSTALL SCRIPT INI MENGGUNAKAN KONEKSI VPN!!!${FONT}"
 echo -e ""
