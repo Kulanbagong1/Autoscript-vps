@@ -4,7 +4,7 @@ ns_domain_cloudflare() {
 	DOMAIN="slowdns.app"
 	DAOMIN=$(cat /etc/xray/domain)
 	SUB=$(tr </dev/urandom -dc a-z0-9 | head -c6)
-	SUB_DOMAIN=${SUB}."slowdns.app"
+	SUB_DOMAIN=${SUB}."yha.my.id"
 	NS_DOMAIN=ns.${SUB_DOMAIN}
 	CF_ID=nuryahyamuhaimin@gmail.com
         CF_KEY=9dd2f30c099dbcf541cbd5c188d61ce060cf7
