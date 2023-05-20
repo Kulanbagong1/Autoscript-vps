@@ -1,11 +1,11 @@
 # Autoscript VPS v.2
-## _Fighter Tunnel, Autoscript ini dapat digunakan oleh Debian 10/Ubuntu 20.04 (LTS)_
+## _Jengkolonline, Autoscript ini dapat digunakan oleh Debian 10/Ubuntu 20.04 (LTS)_
 
-### Contact admin [bhoikfostyahya](https://wa.me/6282372139631/?text=Saya+ingin+beli+sc)
+### Contact admin [jengkolonline](https://wa.me/6282372139631/?text=Saya+ingin+beli+sc)
 
 ### Installer Script
 ```
-wget --no-check-certificate https://raw.githubusercontent.com/Kulanbagong1/Autoscript-vps/main/ub20.sh && chmod +x ub20.sh && ./ub20.sh
+Cat dulu
 ```
 
 |        SERVICE          |      PORT      |
