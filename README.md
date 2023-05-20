@@ -1,7 +1,7 @@
 # Autoscript VPS v.2
 ## _Fighter Tunnel, Autoscript ini dapat digunakan oleh Debian 10/Ubuntu 20.04 (LTS)_
 
-### Contact admin [bhoikfostyahya](https://t.me/bhoikfost_yahya)
+### Contact admin [bhoikfostyahya](https://wa.me/6282372139631/?text=Saya+ingin+beli+sc)
 
 ### Installer Script
 ```
