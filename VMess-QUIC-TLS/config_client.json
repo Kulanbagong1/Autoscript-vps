@@ -26,7 +26,7 @@
     "inbounds": [
         {
             "listen": "127.0.0.1",
-            "port": 10808,
+            "port": 10811,
             "protocol": "socks",
             "settings": {
                 "udp": true
@@ -41,7 +41,7 @@
         },
         {
             "listen": "127.0.0.1",
-            "port": 10809,
+            "port": 10812,
             "protocol": "http",
             "sniffing": {
                 "enabled": true,
@@ -59,7 +59,7 @@
                 "vnext": [
                     {
                         "address": "",
-                        "port": 8443,
+                        "port": 443,
                         "users": [
                             {
                                 "id": "chika",
