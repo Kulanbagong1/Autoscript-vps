@@ -43,8 +43,8 @@ CEKEXPIRED () {
     exit 0
 fi
 }
-IZIN=$(curl -sS ${Repo1}ip | awk '{print $4}' | grep $MYIP)
-if [ $MYIP = $IZIN ]; then
+#IZIN=$(curl -sS ${Repo1}ip | awk '{print $4}' | grep $MYIP)
+#if [ $MYIP = $IZIN ]; then
 echo -e "\e[32mPermission Accepted...\e[0m"
 CEKEXPIRED
 else
