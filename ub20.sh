@@ -24,6 +24,7 @@ red='\e[1;31m'
 green='\e[0;32m'
 green() { echo -e "\\033[32;1m${*}\\033[0m"; }
 red() { echo -e "\\033[31;1m${*}\\033[0m"; }
+#izin
 Repo1="https://raw.githubusercontent.com/Kulanbagong1/izinn/main/"
 
 localip=$(hostname -I | cut -d\  -f1)
