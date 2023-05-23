@@ -25,33 +25,6 @@ green='\e[0;32m'
 green() { echo -e "\\033[32;1m${*}\\033[0m"; }
 red() { echo -e "\\033[31;1m${*}\\033[0m"; }
 #izin
-Repo1="https://raw.githubusercontent.com/Kulanbagong1/izinn/main/"
-
-localip=$(hostname -I | cut -d\  -f1)
-hst=( `hostname` )
-dart=$(cat /etc/hosts | grep -w `hostname` | awk '{print $2}')
-# Getting
-MYIP=$(wget -qO- ipinfo.io/ip);
-echo "Checking VPS"
-CEKEXPIRED () {
-    today=$(date -d +1day +%Y-%m-%d)
-    Exp1=$(curl -sS ${Repo1}ip | grep $MYIP | awk '{print $3}')
-    if [[ $today < $Exp1 ]]; then
-    echo -e "\e[32mSTATUS SCRIPT AKTIF...\e[0m"
-    else
-    echo -e "\e[31mSCRIPT ANDA EXPIRED!\e[0m";
-    exit 0
-fi
-}
-#IZIN=$(curl -sS ${Repo1}ip | awk '{print $4}' | grep $MYIP)
-#if [ $MYIP = $IZIN ]; then
-echo -e "\e[32mPermission Accepted...\e[0m"
-CEKEXPIRED
-else
-echo -e "\e[31mPermission Denied!\e[0m";
-exit 0
-fi
-clear
 
 # // configuration GET | JengkolOnline_VPN AUTOSCRIPT
 TIMES="10"
