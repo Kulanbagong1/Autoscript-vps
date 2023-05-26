@@ -2,7 +2,7 @@
 clear
 echo "# //===================================================="
 echo "# //	System Request:Debian 9+/Ubuntu 18.04+/20.04"
-echo "# //	Author:	bhoikfostyahya"
+echo "# //	Author:	JengkolOnline"
 echo "# //	Dscription: Xray Menu Management"
 echo "# //	email: admin@bhoikfostyahya.com"
 echo "# //      telegram: https://t.me/bhoikfost_yahya"
