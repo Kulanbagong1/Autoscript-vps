@@ -83,7 +83,7 @@ judge() {
 #    else
 #        res="Permission Accepted..."
 #    fi
-}
+#}
 function nginx_install() {
     # // Checking System
     if [[ $(cat /etc/os-release | grep -w ID | head -n1 | sed 's/=//g' | sed 's/"//g' | sed 's/ID//g') == "ubuntu" ]]; then
