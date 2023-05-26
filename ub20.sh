@@ -4,11 +4,11 @@ echo "# //===================================================="
 echo "# //	System Request:Debian 9+/Ubuntu 18.04+/20.04"
 echo "# //	Author:	JengkolOnline"
 echo "# //	Dscription: Copy Ring Fighter tunnel "
-echo "# //	email: admin@bhoikfostyahya.com"
-echo "# //      telegram: https://t.me/bhoikfost_yahya"
+echo "# //	Wa : wa.me/6282372139631"
+echo "# //      Telegram: https://t.me/Jengkol_Online"
 echo "# //===================================================="
 sleep 3
-# // FONT color configuration | BHOIKFOST YAHYA AUTOSCRIPT
+# // FONT color configuration | JengkolOnline AUTOSCRIPT
 Green="\e[92;1m"
 RED="\033[31m"
 YELLOW="\033[33m"
@@ -106,7 +106,7 @@ function LOGO() {
  ───│    $Green┌─┐┬ ┬┌┬┐┌─┐┌─┐┌─┐┬─┐┬┌─┐┌┬┐  ┬  ┬┌┬┐┌─┐$NC   │───
  ───│    $Green├─┤│ │ │ │ │└─┐│  ├┬┘│├─┘ │   │  │ │ ├┤ $NC   │───
  ───│    $Green┴ ┴└─┘ ┴ └─┘└─┘└─┘┴└─┴┴   ┴   ┴─┘┴ ┴ └─┘$NC   │───
-    │    ${YELLOW}Copyright${FONT} (C)$GRAY https://github.com/rullpqh$NC   │
+    │    ${YELLOW}Copyright${FONT} (C)$GRAY Fighter tunnel$NC   │
     └───────────────────────────────────────────────┘
          ${RED}Autoscript xray vpn lite (multi port)${FONT}    
 ${RED}Make sure the internet is smooth when installing the script${FONT}
