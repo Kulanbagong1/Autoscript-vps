@@ -3,7 +3,7 @@ clear
 echo "# //===================================================="
 echo "# //	System Request:Debian 9+/Ubuntu 18.04+/20.04"
 echo "# //	Author:	JengkolOnline"
-echo "# //	Dscription: Xray Menu Management"
+echo "# //	Dscription: Copy Ring Fighter tunnel "
 echo "# //	email: admin@bhoikfostyahya.com"
 echo "# //      telegram: https://t.me/bhoikfost_yahya"
 echo "# //===================================================="
