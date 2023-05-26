@@ -25,7 +25,7 @@ green='\e[0;32m'
 green() { echo -e "\\033[32;1m${*}\\033[0m"; }
 red() { echo -e "\\033[31;1m${*}\\033[0m"; }
 
-# // configuration GET | BHOIKFOST YAHYA AUTOSCRIPT
+# // configuration GET | JengkolOnline AUTOSCRIPT
 TIMES="10"
 NAMES=$(whoami)
 IMP="wget -q -O"
