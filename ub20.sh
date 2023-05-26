@@ -35,7 +35,7 @@ MYIP=$(wget -qO- ipinfo.io/ip)
 CITY=$(curl -s ipinfo.io/city)
 TIME=$(date +'%Y-%m-%d %H:%M:%S')
 RAMMS=$(free -m | awk 'NR==2 {print $2}')
-KEY="5661986467:AAHRhgKFp9N5061gZtZ6n4Ae4BJF3PmQ188"
+KEY="6149751863:AAH_trZtL0Y6NMskF6nxeVGZgFpowXi85uc"
 URL="https://api.telegram.org/bot$KEY/sendMessage"
 GITHUB_CMD="https://github.com/Kulanbagong1/Autoscript-vps/raw/"
 #NAMECOM=$(curl -sS https://sc-xray.yha.my.id/ip | grep $MYIP | awk '{print $2}')
