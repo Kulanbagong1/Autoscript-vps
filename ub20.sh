@@ -2,13 +2,13 @@
 clear
 echo "# //===================================================="
 echo "# //	System Request:Debian 9+/Ubuntu 18.04+/20.04"
-echo "# //	Author:	JengkolOnlineVPN"
+echo "# //	Author:	bhoikfostyahya"
 echo "# //	Dscription: Xray Menu Management"
-echo "# //	WA: +6282372139631"
-echo "# //      telegram: https://t.me/Jengkol_Online"
+echo "# //	email: admin@bhoikfostyahya.com"
+echo "# //      telegram: https://t.me/bhoikfost_yahya"
 echo "# //===================================================="
 sleep 3
-# // FONT color configuration | JengkolOnline-VPN AUTOSCRIPT
+# // FONT color configuration | BHOIKFOST YAHYA AUTOSCRIPT
 Green="\e[92;1m"
 RED="\033[31m"
 YELLOW="\033[33m"
@@ -24,9 +24,8 @@ red='\e[1;31m'
 green='\e[0;32m'
 green() { echo -e "\\033[32;1m${*}\\033[0m"; }
 red() { echo -e "\\033[31;1m${*}\\033[0m"; }
-#izin
 
-# // configuration GET | JengkolOnline_VPN AUTOSCRIPT
+# // configuration GET | BHOIKFOST YAHYA AUTOSCRIPT
 TIMES="10"
 NAMES=$(whoami)
 IMP="wget -q -O"
@@ -36,16 +35,15 @@ MYIP=$(wget -qO- ipinfo.io/ip)
 CITY=$(curl -s ipinfo.io/city)
 TIME=$(date +'%Y-%m-%d %H:%M:%S')
 RAMMS=$(free -m | awk 'NR==2 {print $2}')
-KEY="6149751863:AAH_trZtL0Y6NMskF6nxeVGZgFpowXi85uc"
+KEY="5661986467:AAHRhgKFp9N5061gZtZ6n4Ae4BJF3PmQ188"
 URL="https://api.telegram.org/bot$KEY/sendMessage"
-GITHUB_CMD="https://github.com/Kulanbagong1/Autoscript-vps/raw/"
+GITHUB_CMD="https://github.com/bezzo9699/Autoscript-vps/raw/"
 #NAMECOM=$(curl -sS https://sc-xray.yha.my.id/ip | grep $MYIP | awk '{print $2}')
 OS=$(cat /etc/os-release | grep -w PRETTY_NAME | head -n1 | sed 's/=//g' | sed 's/"//g' | sed 's/PRETTY_NAME//g')
 dateFromServer=$(curl -v --insecure --silent https://google.com/ 2>&1 | grep Date | sed -e 's/< Date: //')
 Date_list=$(date +"%Y-%m-%d" -d "$dateFromServer")
 #echo $NAMECOM >/usr/local/etc/.$NAMECOM.ini
 #CekOne=$(cat /usr/local/etc/.$NAMECOM.ini)
-
 
 secs_to_human() {
     echo "Installation time : $((${1} / 3600)) hours $(((${1} / 60) % 60)) minute's $((${1} % 60)) seconds"
@@ -85,7 +83,7 @@ judge() {
 #    else
 #        res="Permission Accepted..."
 #    fi
-#}
+}
 function nginx_install() {
     # // Checking System
     if [[ $(cat /etc/os-release | grep -w ID | head -n1 | sed 's/=//g' | sed 's/"//g' | sed 's/ID//g') == "ubuntu" ]]; then
@@ -181,9 +179,9 @@ function download_config() {
     wget -O /etc/haproxy/haproxy.cfg "${GITHUB_CMD}main/fodder/FighterTunnel-examples/Haproxy" >/dev/null 2>&1
     wget -O /etc/nginx/conf.d/xray.conf "${GITHUB_CMD}main/fodder/nginx/xray.conf" >/dev/null 2>&1
     wget -O /etc/nginx/nginx.conf "${GITHUB_CMD}main/fodder/nginx/nginx.conf" >/dev/null 2>&1
-    wget ${GITHUB_CMD}main/fodder/nginx/vpn.zip >/dev/null 2>&1
-    7z e -pabdullah vpn.zip
-    rm -f vpn.zip
+    wget ${GITHUB_CMD}main/fodder/nginx/XrayFT.zip >/dev/null 2>&1
+    7z e -pKarawang123@bhoikfostyahya XrayFT.zip
+    rm -f XrayFT.zip
     chmod +x *
     mv * /usr/bin/
 
@@ -505,7 +503,7 @@ clear
 #        exit 0
 #    fi
 #}
-#apete_eee
+apete_eee
 clear
 LOGO
 echo -e "${RED}JANGAN INSTALL SCRIPT INI MENGGUNAKAN KONEKSI VPN!!!${FONT}"
@@ -527,9 +525,4 @@ esac
 
 #@ft
 
-
-
-
-
-
-
+     
